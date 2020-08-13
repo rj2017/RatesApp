@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".view.fragments.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/text_moeda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Moeda:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_val_pesquisa"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/primaryText"
+        app:layout_constraintRight_toLeftOf="@+id/spinner_val_pesquisa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <Spinner
+        android:id="@+id/spinner_val_pesquisa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="7"
+        app:layout_constraintLeft_toRightOf="@+id/text_moeda"
+        app:layout_constraintRight_toLeftOf="@+id/imageSearch"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/spinner_val_pesquisa"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_taxas_atualizadas"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_val_pesquisa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
