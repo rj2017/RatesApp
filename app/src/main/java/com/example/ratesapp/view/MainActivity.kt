@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
@@ -38,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_home,
             R.id.nav_conversao,
             R.id.nav_historico,
+            R.id.nav_perfil,
             R.id.nav_sair
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -53,13 +53,13 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
         observer()
+
     }
 
     override fun onResume() {
-        mainViewModel.loadUserName()
         super.onResume()
+        mainViewModel.loadUserName()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -82,11 +82,15 @@ class MainActivity : AppCompatActivity() {
         })
 
         mainViewModel.userInfor.observe(this, Observer {
-            val navView = findViewById<NavigationView>(R.id.nav_view)
-            val header = navView.getHeaderView(0)
 
-            header.findViewById<TextView>(R.id.textViewNome).text = "Seja bem vindo ${it.nome}"
-            header.findViewById<TextView>(R.id.textViewEmail).text = it.email
+            if (it != null) {
+                val navView = findViewById<NavigationView>(R.id.nav_view)
+                val header = navView.getHeaderView(0)
+                header.findViewById<TextView>(R.id.textViewNome).text = "Seja bem vindo ${it.nome}"
+                header.findViewById<TextView>(R.id.textViewEmail).text = it.email
+            }
         })
     }
+
+
 }

@@ -53,7 +53,9 @@ class RegistrarActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this,"As senhas devem ser indênticas!", Toast.LENGTH_LONG).show()
         }else if (nome == "" || email =="" || senha == "" || confSenha == ""){
             Toast.makeText(this,"Todos os campos devem estar preenchidos!", Toast.LENGTH_LONG).show()
-        }else{
+        }else if (senha.length < 5){
+            Toast.makeText(this,"A senha deve ter no mínimo 5 caracteres!", Toast.LENGTH_LONG).show()
+        } else{
             val user = UserLocalModel()
             user.nome = nome
             user.email = email

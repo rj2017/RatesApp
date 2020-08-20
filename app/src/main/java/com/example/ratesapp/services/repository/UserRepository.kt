@@ -16,4 +16,12 @@ class UserRepository(context: Context){
     fun logar(email: String, password : String): UserLocalModel{
         return mDatabase.login(email,password)
     }
+
+    fun alterar(id: Int ,nome : String, email : String) : UserLocalModel{
+        return mDatabase.getId(mDatabase.alterar(id,nome,email))
+    }
+
+    fun alterarSenha(id: Int, senha : String): Boolean{
+        return  mDatabase.alterarSenha(id,senha) > 0
+    }
 }
