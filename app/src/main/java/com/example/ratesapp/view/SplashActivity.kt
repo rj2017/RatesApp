@@ -20,9 +20,6 @@ class SplashActivity : AppCompatActivity() {
         splahsViewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
         isLogin()
         observer()
-        Handler().postDelayed({
-            startActivity(Intent(this,LoginActivity::class.java))
-        },SPLASH_TIME_OUT)
     }
 
     fun isLogin(){
@@ -32,7 +29,12 @@ class SplashActivity : AppCompatActivity() {
     fun observer(){
         splahsViewModel.logado.observe(this, Observer {
             if (it){
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
+            }else{
+                Handler().postDelayed({
+                    startActivity(Intent(this,LoginActivity::class.java))
+                },SPLASH_TIME_OUT)
             }
         })
     }

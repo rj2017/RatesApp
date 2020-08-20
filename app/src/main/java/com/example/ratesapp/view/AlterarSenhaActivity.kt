@@ -44,7 +44,6 @@ class AlterarSenhaActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         val id = view.id
-
         when(id){
             R.id.button_alterar_senha -> handleAlterarSenha()
         }

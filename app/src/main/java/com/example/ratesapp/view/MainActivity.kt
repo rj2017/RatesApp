@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             if (it != null) {
                 val navView = findViewById<NavigationView>(R.id.nav_view)
                 val header = navView.getHeaderView(0)
-                header.findViewById<TextView>(R.id.textViewNome).text = "Seja bem vindo ${it.nome}"
+                header.findViewById<TextView>(R.id.textViewNome).text = "Seja bem vindo ${it.nome.substringBefore(" ")}"
                 header.findViewById<TextView>(R.id.textViewEmail).text = it.email
             }
         })
