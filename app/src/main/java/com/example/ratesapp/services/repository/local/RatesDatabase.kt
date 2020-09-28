@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.ratesapp.services.model.HistoricoLocalModel
 import com.example.ratesapp.services.model.UserLocalModel
 
-@Database(entities = [UserLocalModel::class, HistoricoLocalModel::class],version = 1)
+@Database(entities = [UserLocalModel::class, HistoricoLocalModel::class],version = 2)
 abstract class RatesDatabase : RoomDatabase() {
 
     abstract fun userDao() : UserDao

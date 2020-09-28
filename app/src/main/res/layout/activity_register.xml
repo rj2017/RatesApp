@@ -1,90 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     android:padding="20dp"
     tools:context=".view.RegistrarActivity">
 
-    <EditText
-        android:id="@+id/et_name_register"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:drawableStart="@drawable/ic_baseline_account_circle_24"
-        android:drawablePadding="5dp"
-        android:hint="Nome:"
-        android:inputType="textEmailAddress"
-        style="@style/AppTheme.NoActionBar.EditText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_email_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_alternate_email_24"
-        android:drawablePadding="5dp"
-        android:hint="Email:"
-        android:inputType="textEmailAddress"
-        style="@style/AppTheme.NoActionBar.EditText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_name_register" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_name_register_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/et_password_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="5dp"
-        android:hint="Senha:"
-        android:inputType="textPassword"
-        style="@style/AppTheme.NoActionBar.EditText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_register" />
+            <EditText
+                android:id="@+id/et_name_register"
+                style="@style/AppTheme.NoActionBar.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_account_circle_24"
+                android:drawablePadding="5dp"
+                android:hint="Nome:"
+                android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/et_password_register_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="5dp"
-        android:hint="Confirme a senha:"
-        android:inputType="textPassword"
-        style="@style/AppTheme.NoActionBar.EditText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_register" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/txt_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Já possuo cadastro"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/dividerColor"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_register_confirm"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_email_register_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_register_layout">
 
-    <Button
-        android:id="@+id/bt_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/shape_button_transparent"
-        android:textColor="@color/white"
-        android:paddingStart="60dp"
-        android:paddingEnd="60dp"
-        android:text="Registrar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_register" />
+            <EditText
+                android:id="@+id/et_email_register"
+                style="@style/AppTheme.NoActionBar.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_alternate_email_24"
+                android:drawablePadding="5dp"
+                android:hint="Email:"
+                android:inputType="textEmailAddress" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_password_register_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_register_layout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <EditText
+                android:id="@+id/et_password_register"
+                style="@style/AppTheme.NoActionBar.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="5dp"
+                android:hint="Senha:"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_password_register_confirm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password_register_layout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <EditText
+                android:id="@+id/et_password_register_confirm"
+                style="@style/AppTheme.NoActionBar.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="5dp"
+                android:hint="Confirme a senha:"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Já possuo cadastro"
+            android:textColor="@color/dividerColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password_register_confirm_layout" />
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/shape_button_transparent"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="Registrar"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

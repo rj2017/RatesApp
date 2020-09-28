@@ -29,20 +29,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_weight="7"
         app:layout_constraintLeft_toRightOf="@+id/text_moeda"
-        app:layout_constraintRight_toLeftOf="@+id/imageSearch"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_search_24"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:tint="@color/colorPrimaryDark"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@+id/spinner_val_pesquisa"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_taxas_atualizadas"

@@ -11,6 +11,7 @@ import com.example.ratesapp.services.model.ResponseModel
 import com.example.ratesapp.services.repository.HistoricoRepository
 import com.example.ratesapp.services.repository.RatesRepository
 import com.example.ratesapp.services.repository.local.SecurityPreferences
+import java.util.*
 
 class ConversaoViewModel(application : Application) : AndroidViewModel(application) {
 
@@ -21,7 +22,7 @@ class ConversaoViewModel(application : Application) : AndroidViewModel(applicati
     private val mResultado = MutableLiveData<Float>()
     val resultado : LiveData<Float> = mResultado
 
-    fun converter(base : String , referencia : String, valor : Float){
+    fun converter(base: String, referencia: String, valor: Float, data: String){
         mRepository.latestGetBase(base, object : APIListener<ResponseModel>{
             override fun onSucess(result: ResponseModel, statusCode: Int) {
                 val valorMoeda = result.rates[referencia]
@@ -33,6 +34,7 @@ class ConversaoViewModel(application : Application) : AndroidViewModel(applicati
                 historico.userId = mSecurityPreferences.get(RatesConstants.SHARED.ID)
                 historico.valorBase = valor
                 historico.valorTotal = resultado
+                historico.dataSalva =data
 
                 salvarHistorico(historico)
                 mResultado.value = resultado

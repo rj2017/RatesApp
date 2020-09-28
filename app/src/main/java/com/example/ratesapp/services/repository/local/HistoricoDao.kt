@@ -13,4 +13,5 @@ interface HistoricoDao {
 
     @Query("SELECT * FROM historico WHERE userid = :id")
     fun selectAll(id: Int) : List<HistoricoLocalModel>
+
 }

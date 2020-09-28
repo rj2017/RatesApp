@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="rates_array">
-        <item>BRL</item>
-        <item>EUR</item>
-        <item>USD</item>
-        <item>CAD</item>
-        <item>HKD</item>
-        <item>ISK</item>
-        <item>PHP</item>
-        <item>DKK</item>
-        <item>HUF</item>
-        <item>CZK</item>
-        <item>GBP</item>
-        <item>RON</item>
-        <item>SEK</item>
-        <item>RUB</item>
-        <item>IDR</item>
-        <item>INR</item>
-        <item>HRK</item>
-        <item>JPY</item>
-        <item>THB</item>
-        <item>CHF</item>
-        <item>MYR</item>
-        <item>BGN</item>
-        <item>TRY</item>
-        <item>CNY</item>
-        <item>NZD</item>
-        <item>NOK</item>
-        <item>ZAR</item>
-        <item>MXN</item>
-        <item>SGD</item>
-        <item>AUD</item>
-        <item>ILS</item>
-        <item>KRW</item>
-        <item>PLN</item>
+        <item>Real Brasileiro</item>
+        <item>Euro</item>
+        <item>Dóla EUA</item>
+        <item>Dóla Canadense</item>
+        <item>Dólar de Hong Kong</item>
+        <item>Coroa islandesa</item>
+        <item>Peso filipino</item>
+        <item>Coroa dinamarquesa</item>
+        <item>Florim húngaro</item>
+        <item>Coroa checa</item>
+        <item>Libra esterlina</item>
+        <item>Moeda da Romênia</item>
+        <item>Coroa sueca</item>
+        <item>Rublo Russo</item>
+        <item>Rupiah</item>
+        <item>Rupia indiana</item>
+        <item>Kuna</item>
+        <item>Yen</item>
+        <item>Baht</item>
+        <item>Franco suíço</item>
+        <item>Ringgit da Malásia</item>
+        <item>Lev búlgaro</item>
+        <item>Lira turca</item>
+        <item>Ren-Min-Bi, Yuan</item>
+        <item>Dólar neozelandês</item>
+        <item>Coroa Norueguesa</item>
+        <item>Rand</item>
+        <item>Peso mexicano</item>
+        <item>Dólar de Cingapura</item>
+        <item>Dólar australiano</item>
+        <item>shekel israelita</item>
+        <item>Won sul-coreano</item>
+        <item>Zloty</item>
     </string-array>
 </resources>

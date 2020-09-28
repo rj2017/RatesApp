@@ -28,4 +28,5 @@ class RatesAdapter : RecyclerView.Adapter<RatesViewHolder>() {
         myDataset = list
         notifyDataSetChanged()
     }
+
 }

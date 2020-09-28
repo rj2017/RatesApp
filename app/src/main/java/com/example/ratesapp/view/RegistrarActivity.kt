@@ -69,7 +69,7 @@ class RegistrarActivity : AppCompatActivity(), View.OnClickListener {
         registrarViewModel.save.observe(this, Observer {
             if (it){
                 Toast.makeText(this,"usuário Cadastrado com sucesso!", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this,RegistrarActivity::class.java))
+                startActivity(Intent(this,LoginActivity::class.java))
                 finish()
             }else{
                 Toast.makeText(this,"Não foi possível cadastrar o usuário", Toast.LENGTH_LONG).show()

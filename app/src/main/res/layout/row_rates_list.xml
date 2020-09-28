@@ -18,6 +18,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp">
 
+            <ImageView
+                android:id="@+id/row_image_list"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/brasil"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"/>
+
             <TextView
                 android:id="@+id/row_txt_cambio"
                 android:layout_width="wrap_content"
